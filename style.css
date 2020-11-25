@@ -194,7 +194,7 @@ p{
     align-items: center;
     /* box-shadow: 10px 10px #888888; */
     border-radius: 1%;
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
     opacity: 0.85;
 
 }
@@ -315,7 +315,7 @@ p{
 .confusingslab{
     height: 60px;
     background:lightgray;
-    margin-top: 5%;
+    margin-top: 7%;
     width: 85%;
 }
 
