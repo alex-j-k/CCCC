@@ -341,6 +341,11 @@ p{
     justify-content: center;
 }
 
+#maincharacterexampletext {
+    width: 40px;
+    height: 55px;
+}
+
 h1{
     font-size: 1.3rem;
 }
