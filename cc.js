@@ -82,16 +82,21 @@ const 巾 =  [['巾'], ['jin1'], ['Towel']];
 const 刂 =  [['刀'], ['dao1'], ['Knife']];
 const 田 =  [['田'], ['tian2'], ['Field']];
 const 宀 =  [['宀'], ['mian2'], ['Roof']];
+const 子 =  [['子'], ['zi3'], ['Child']];
 
+const 又 =  [['又'], ['you4'], ['Again']];
+const 开 =  [['开'], ['kai1'], ['Open']];
 
+const 丶 =  [['丶'], ['zhu3'], ['Dot']];
+const 皿 =  [['皿'], ['min3'], ['Dish']];
+const 亻 =  [['亻'], ['ren2'], ['Man']];
 
-
-
-
-const 八rad =  [['八'], ['ba1'], ['Eight']];
-const 木rad =  [['木'], ['mu4'], ['Tree']];
+const 监rad = [['监'], ['jian1'], ['Supervise']];
+const 见rad = [['见'], ['jian4'], ['To See']];
+const 八rad = [['八'], ['ba1'], ['Eight']];
+const 木rad = [['木'], ['mu4'], ['Tree']];
 const 未rad = [['未'], ['wei4'], ['Not Yet']];
-
+const 禾rad = [['禾'], ['he2'], ['Grain']];
 
 const 育rad = [['育'], ['yu4'], ['Educate']];
 const 畐rad = [['畐'], ['fu2'], ['Fill']];
@@ -108,7 +113,7 @@ const N = ['', '', ''];
 // CHARACTER CLASS CONSTRUCTOR
 
 class Character {
-    constructor(main, pinyin, def, list, rad1, rad2, rad3, rad4){
+    constructor(main, pinyin, def, list, rad1, rad2, rad3, rad4, rad5){
         this.main = main;
         this.pinyin = pinyin;
         this.def = def;
@@ -117,61 +122,76 @@ class Character {
         this.rad2 = rad2;
         this.rad3 = rad3;
         this.rad4 = rad4;
+        this.rad5 = rad5;
+
     }
 };
 
 
 
 //CHARACTER CONSTANTS
-const 蔼 = new Character('蔼', 'ai3','Friendly', ['蔼','喝','曷','揭', '渴', '歇'], [...讠],[...艹],[...曷rad],[...N]); 
-const 喝 = new Character('喝', 'he1','To Drink', ['蔼','喝','曷','揭', '渴', '歇'], [...口],[...日],[...勹],[...人]); 
-const 曷 = new Character('曷', 'he2','Why?',['蔼','喝','曷','揭', '渴', '歇'],[...日], [...勹],[...人],[...N]);
-const 渴 = new Character('渴', 'ke3','Thirsty',['蔼','喝','曷','揭', '渴', '歇'], [...氵],[...日],[...勹],[...人]);
-const 揭 = new Character('揭', 'jie1','To Lift',['蔼','喝','曷','揭', '渴', '歇'],[...扌],[...日],[...勹],[...人]);
-const 歇 = new Character('歇', 'xie1','To Rest',['蔼','喝','曷','揭', '渴', '歇'], [...日],[...勹],[...人],[...欠]);
+const 蔼 = new Character('蔼', 'ai3','Friendly', ['蔼','喝','曷','揭', '渴', '歇'], [...讠],[...艹],[...曷rad],[...N],[...N]); 
+const 喝 = new Character('喝', 'he1','To Drink', ['蔼','喝','曷','揭', '渴', '歇'], [...口],[...日],[...勹],[...人],[...N]); 
+const 曷 = new Character('曷', 'he2','Why?',['蔼','喝','曷','揭', '渴', '歇'],[...日], [...勹],[...人],[...N],[...N]);
+const 渴 = new Character('渴', 'ke3','Thirsty',['蔼','喝','曷','揭', '渴', '歇'], [...氵],[...日],[...勹],[...人],[...N]);
+const 揭 = new Character('揭', 'jie1','To Lift',['蔼','喝','曷','揭', '渴', '歇'],[...扌],[...日],[...勹],[...人],[...N]);
+const 歇 = new Character('歇', 'xie1','To Rest',['蔼','喝','曷','揭', '渴', '歇'], [...日],[...勹],[...人],[...欠],[...N]);
 
-const 贝 = new Character('贝', 'bei4','Shell',['见', '贝'], [...冂],[...人],[...N],[...N]);
-const 见 = new Character('见', 'jian4','To See',['见', '贝'], [...冂],[...儿],[...N],[...N]);
+const 贝 = new Character('贝', 'bei4','Shell',['见', '贝'], [...冂],[...人],[...N],[...N],[...N]);
+const 见 = new Character('见', 'jian4','To See',['见', '贝'], [...冂],[...儿],[...N],[...N],[...N]);
 
-const 哀 = new Character('哀', 'ai1','Sorrow',['哀', '衰', '衷'], [...衣],[...口],[...N],[...N]);
-const 衰 = new Character('衰', 'shuai1','Decrease',['哀', '衰', '衷'], [...衣],[...口],[...一],[...N]);
-const 衷 = new Character('衷', 'zhong1','Inner Feelings',['哀', '衰', '衷'], [...衣],[...口],[...丨],[...N]);
+const 哀 = new Character('哀', 'ai1','Sorrow',['哀', '衰', '衷'], [...衣],[...口],[...N],[...N],[...N]);
+const 衰 = new Character('衰', 'shuai1','Decrease',['哀', '衰', '衷'], [...衣],[...口],[...一],[...N],[...N]);
+const 衷 = new Character('衷', 'zhong1','Inner Feelings',['哀', '衰', '衷'], [...衣],[...口],[...丨],[...N],[...N]);
 
-const 包 = new Character('包', 'bao1','Wrap',['包', '抱', '拘', '句'], [...勹],[...巳],[...N],[...N]);
-const 抱 = new Character('抱', 'bao4','Embrace',['包', '抱', '拘', '句'], [...扌],[...巳],[...勹],[...N]);
-const 拘 = new Character('拘', 'ju1','Detain',['包', '抱', '拘', '句'], [...扌],[...口],[...勹],[...N]);
-const 句 = new Character('句', 'ju4','Sentence',['包', '抱', '拘', '句'], [...口],[...勹],[...N],[...N]);
+const 包 = new Character('包', 'bao1','Wrap',['包', '抱', '拘', '句'], [...勹],[...巳],[...N],[...N],[...N]);
+const 抱 = new Character('抱', 'bao4','Embrace',['包', '抱', '拘', '句'], [...扌],[...巳],[...勹],[...N],[...N]);
+const 拘 = new Character('拘', 'ju1','Detain',['包', '抱', '拘', '句'], [...扌],[...口],[...勹],[...N],[...N]);
+const 句 = new Character('句', 'ju4','Sentence',['包', '抱', '拘', '句'], [...口],[...勹],[...N],[...N],[...N]);
 
-const 裁 = new Character('裁', 'cai2','To cut',['裁', '栽', '载'], [...土],[...衣],[...戈],[...N]);
-const 栽 = new Character('栽', 'zai1','To Grow',['裁', '栽', '载'], [...土],[...木rad],[...戈],[...N]);
-const 载 = new Character('载', 'zai4','To Load',['裁', '栽', '载'], [...土],[...车],[...戈],[...N]);
+const 裁 = new Character('裁', 'cai2','To cut',['裁', '栽', '载'], [...土],[...衣],[...戈],[...N],[...N]);
+const 栽 = new Character('栽', 'zai1','To Grow',['裁', '栽', '载'], [...土],[...木rad],[...戈],[...N],[...N]);
+const 载 = new Character('载', 'zai4','To Load',['裁', '栽', '载'], [...土],[...车],[...戈],[...N],[...N]);
 
-const 彻 = new Character('彻', 'che4','Thorough',['彻','切', '窃'], [...彳],[...七],[...刀],[...N]);
-const 切 = new Character('切', 'qie1 (qie4)','Cut (Eager)',['彻','切', '窃'], [...七],[...刀],[...N],[...N]);
-const 窃 = new Character('窃', 'qie4','Steal',['彻','切', '窃'], [...穴rad],[...七],[...刀],[...N]);
+const 彻 = new Character('彻', 'che4','Thorough',['彻','切', '窃'], [...彳],[...七],[...刀],[...N],[...N]);
+const 切 = new Character('切', 'qie1 (qie4)','Cut (Eager)',['彻','切', '窃'], [...七],[...刀],[...N],[...N],[...N]);
+const 窃 = new Character('窃', 'qie4','Steal',['彻','切', '窃'], [...穴rad],[...七],[...刀],[...N],[...N]);
 
-const 惭 = new Character('惭', 'can2','Ashamed', ['惭','渐','暂','崭', '斩'], [...忄],[...斩rad],[...N],[...N]); 
-const 渐 = new Character('渐', 'jian4','Gradually',['惭','渐','暂','崭', '斩'],[...氵], [...斩rad],[...N],[...N]);
-const 暂 = new Character('暂', 'zan4','Temporarily',['惭','渐','暂','崭', '斩'], [...斩rad],[...日],[...N],[...N]);
-const 崭 = new Character('崭', 'zhan3','High',['惭','渐','暂','崭', '斩'],[...山],[...斩rad],[...N],[...N]);
-const 斩 = new Character('斩', 'zhan3','Chop',['惭','渐','暂','崭', '斩'], [...车],[...斤],[...N],[...N]);
+const 惭 = new Character('惭', 'can2','Ashamed', ['惭','渐','暂','崭', '斩'], [...忄],[...斩rad],[...N],[...N],[...N]); 
+const 渐 = new Character('渐', 'jian4','Gradually',['惭','渐','暂','崭', '斩'],[...氵], [...斩rad],[...N],[...N],[...N]);
+const 暂 = new Character('暂', 'zan4','Temporarily',['惭','渐','暂','崭', '斩'], [...斩rad],[...日],[...N],[...N],[...N]);
+const 崭 = new Character('崭', 'zhan3','High',['惭','渐','暂','崭', '斩'],[...山],[...斩rad],[...N],[...N],[...N]);
+const 斩 = new Character('斩', 'zhan3','Chop',['惭','渐','暂','崭', '斩'], [...车],[...斤],[...N],[...N],[...N]);
 
-const 澈 = new Character('澈', 'che4','Clear',['澈', '撤'], [...氵],[...育rad],[...攵],[...N]);
-const 撤 = new Character('撤', 'che4','Withdraw',['澈', '撤'], [...扌],[...育rad],[...攵],[...N]);
+const 澈 = new Character('澈', 'che4','Clear',['澈', '撤'], [...氵],[...育rad],[...攵],[...N],[...N]);
+const 撤 = new Character('撤', 'che4','Withdraw',['澈', '撤'], [...扌],[...育rad],[...攵],[...N],[...N]);
 
-const 畐 = new Character('畐', 'fu2','Fill', ['畐','幅','辐','福', '富', '副'], [...一],[...口],[...田],[...N]);
-const 幅 = new Character('幅', 'fu2','Width',['畐','幅','辐','福', '富', '副'],[...巾], [...畐rad],[...N],[...N]);
-const 辐 = new Character('辐', 'fu2','Spokes',['畐','幅','辐','福', '富', '副'],[...车],[...畐rad],[...N],[...N]);
-const 福 = new Character('辐', 'fu2','Blessing',['畐','幅','辐','福', '富', '副'],[...礻],[...畐rad],[...N],[...N]);   
-const 富 = new Character('富', 'fu4','Wealthy', ['畐','幅','辐','福', '富', '副'], [...宀],[...畐rad],[...N],[...N]); 
-const 副 = new Character('副', 'fu4','Secondary',['畐','幅','辐','福', '富', '副'], [...畐rad],[...刂],[...N],[...N]);
+const 畐 = new Character('畐', 'fu2','Fill', ['畐','幅','辐','福', '富', '副'], [...一],[...口],[...田],[...N],[...N]);
+const 幅 = new Character('幅', 'fu2','Width',['畐','幅','辐','福', '富', '副'],[...巾], [...畐rad],[...N],[...N],[...N]);
+const 辐 = new Character('辐', 'fu2','Spokes',['畐','幅','辐','福', '富', '副'],[...车],[...畐rad],[...N],[...N],[...N]);
+const 福 = new Character('辐', 'fu2','Blessing',['畐','幅','辐','福', '富', '副'],[...礻],[...畐rad],[...N],[...N],[...N]);   
+const 富 = new Character('富', 'fu4','Wealthy', ['畐','幅','辐','福', '富', '副'], [...宀],[...畐rad],[...N],[...N],[...N]); 
+const 副 = new Character('副', 'fu4','Secondary',['畐','幅','辐','福', '富', '副'], [...畐rad],[...刂],[...N],[...N],[...N]);
 
-const 禾 = new Character('禾', 'he2','Grain', ['禾','来','米','末', '木', '未'], [...一],[...木rad],[...曷rad],[...N]); 
-const 来 = new Character('来', 'lai2','Come', ['禾','来','米','末', '木', '未'], [...八rad],[...未rad],[...N],[...N]); 
-const 米 = new Character('米', 'mi3','Rice',['禾','来','米','末', '木', '未'],[...八rad], [...木rad],[...N],[...N]);
-const 末 = new Character('末', 'mo4','Tip',['禾','来','米','末', '木', '未'],[...一],[...木rad],[...N],[...N]);
-const 木 = new Character('木', 'mu4','Tree',['禾','来','米','末', '木', '未'],[...木rad],[...日],[...N],[...N]);
-const 未 = new Character('未', 'wei4','Not yet',['禾','来','米','末', '木', '未'], [...一],[...木rad],[...N],[...N]);
+const 禾 = new Character('禾', 'he2','Grain', ['禾','来','米','末', '木', '未'], [...一],[...木rad],[...曷rad],[...N],[...N]); 
+const 来 = new Character('来', 'lai2','Come', ['禾','来','米','末', '木', '未'], [...八rad],[...未rad],[...N],[...N],[...N]); 
+const 米 = new Character('米', 'mi3','Rice',['禾','来','米','末', '木', '未'],[...八rad], [...木rad],[...N],[...N],[...N]);
+const 末 = new Character('末', 'mo4','Tip',['禾','来','米','末', '木', '未'],[...一],[...木rad],[...N],[...N],[...N]);
+const 木 = new Character('木', 'mu4','Tree',['禾','来','米','末', '木', '未'],[...木rad],[...日],[...N],[...N],[...N]);
+const 未 = new Character('未', 'wei4','Not yet',['禾','来','米','末', '木', '未'], [...一],[...木rad],[...N],[...N],[...N]);
+
+const 季 = new Character('季', 'ji4','Season',['季', '李'], [...禾rad],[...子],[...N],[...N],[...N]);
+const 李 = new Character('李', 'li3','Plum tree',['季', '李'], [...木rad],[...子],[...N],[...N],[...N]);
+
+
+const 坚 = new Character('坚', 'jian1','Resolutely',['坚', '型'], [...丨],[...丨],[...又],[...土],[...N]);
+const 型 = new Character('型', 'xing2','Model',['坚', '型'], [...开],[...刂],[...土],[...N],[...N]);
+
+
+const 监 = new Character('监', 'jian1','Supervise',['监', '蓝', '览', '临'], [...丨],[...亻],[...丶],[...皿],[...N]);
+const 蓝 = new Character('蓝', 'lan2','Blue',['监', '蓝', '览', '临'], [...艹],[...监rad],[...N],[...N],[...N]);
+const 览 = new Character('览', 'lan3','To Look At',['监', '蓝', '览', '临'], [...丨],[...亻],[...丶],[...见rad],[...N]);
+const 临 = new Character('临', 'lin2','Just near',['监', '蓝', '览', '临'], [...丨],[...亻],[...丶],[...口],[...N]);
 
 
 //ARRAY OF ALL CHARACTERS
@@ -187,6 +207,9 @@ const characters = [
     [澈, 撤],
     [畐, 幅, 辐, 福, 富, 副],
     [禾, 来, 米, 末, 木, 未],
+    [季, 李],
+    [坚, 型],
+    [监, 蓝, 览, 临],
  ];
 
 
@@ -263,7 +286,10 @@ function createConfusingSlab(ch){
                     </div>
                     <div class="rad1">
                         <p class="r">${ch.rad4[0]}</p><p class="p">${ch.rad4[1]}</p><p class="m">${ch.rad4[2]}</p>
-                    </div>    
+                    </div>
+                    <div class="rad1">
+                        <p class="r">${ch.rad5[0]}</p><p class="p">${ch.rad5[1]}</p><p class="m">${ch.rad5[2]}</p>
+                    </div>      
     </div>
 </div> `;
 
