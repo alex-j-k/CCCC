@@ -73,11 +73,24 @@ const 彳 =  [['彳'], ['chi4'], ['Left Step']];
 const 七 =  [['七'], ['qi1'], ['Seven']];
 const 刀 =  [['刀'], ['dao1'], ['Knife']];
 
+const 山 =  [['山'], ['shan3'], ['Mountain']];
+
+const 攵 =  [['攵'], ['pu1'], ['Tap']];
+
+const 礻 =  [['礻'], ['shi4'], ['Spirit']];
+
+const 巾 =  [['巾'], ['jin1'], ['Towel']];
+const 刂 =  [['刀'], ['dao1'], ['Knife']];
+const 田 =  [['田'], ['tian2'], ['Field']];
+const 宀 =  [['宀'], ['mian2'], ['Roof']];
 
 
-
-const 穴rad=  [['穴'], ['xue2'], ['Cave']];
-const 曷rad=  [['曷'], ['he2'], ['Why?']];
+const 育rad = [['育'], ['yu4'], ['Educate']];
+const 畐rad = [['畐'], ['fu2'], ['Fill']];
+const 富rad = [['富'], ['fu4'], ['Wealthy']];
+const 斩rad = [['穴'], ['zhan3'], ['Chop']];
+const 穴rad = [['穴'], ['xue2'], ['Cave']];
+const 曷rad = [['曷'], ['he2'], ['Why?']];
 
 
 const N = ['', '', ''];
@@ -127,15 +140,23 @@ const 载 = new Character('载', 'zai4','To Load',['裁', '栽', '载'], [...土
 
 const 彻 = new Character('彻', 'che4','Thorough',['彻','切', '窃'], [...彳],[...七],[...刀],[...N]);
 const 切 = new Character('切', 'qie1 (qie4)','Cut (Eager)',['彻','切', '窃'], [...七],[...刀],[...N],[...N]);
-// const 切b = new Character('切b', 'qie4','Eager',['彻'], [...七],[...刀],[...N],[...N]);
 const 窃 = new Character('窃', 'qie4','Steal',['彻','切', '窃'], [...穴rad],[...七],[...刀],[...N]);
 
+const 惭 = new Character('惭', 'can2','Ashamed', ['惭','渐','暂','崭', '斩'], [...忄],[...斩rad],[...N],[...N]); 
+const 渐 = new Character('渐', 'jian4','Gradually',['惭','渐','暂','崭', '斩'],[...氵], [...斩rad],[...N],[...N]);
+const 暂 = new Character('暂', 'zan4','Temporarily',['惭','渐','暂','崭', '斩'], [...斩rad],[...日],[...N],[...N]);
+const 崭 = new Character('崭', 'zhan3','High',['惭','渐','暂','崭', '斩'],[...山],[...斩rad],[...N],[...N]);
+const 斩 = new Character('斩', 'zhan3','Chop',['惭','渐','暂','崭', '斩'], [...车],[...斤],[...N],[...N]);
 
-// const 彻 = new Character('彻', 'che4','Thorough',['彻', '切', '窃'], [...彳],[...七],[...刀],[...N]);
-// const 切a = new Character('切a', 'qie1','Cut',['彻', '切a', '切b', '窃'], [...七],[...刀],[...N],[...N]);
-// const 切b = new Character('切b ', 'qie4','eager',['彻', '切a', '切b', '窃'], [...七],[...刀],[...N],[...N]);
-// const 窃 = new Character('句', 'qie4','Steal',['彻', '切a', '切b', '窃'], [...穴rad],[...七],[...刀],[...N]);
+const 澈 = new Character('澈', 'che4','Clear',['澈', '撤'], [...氵],[...育rad],[...攵],[...N]);
+const 撤 = new Character('撤', 'che4','Withdraw',['澈', '撤'], [...扌],[...育rad],[...攵],[...N]);
 
+const 畐 = new Character('畐', 'fu2','Fill', ['畐','幅','辐','福', '富', '副'], [...一],[...口],[...田],[...N]);
+const 幅 = new Character('幅', 'fu2','Width',['畐','幅','辐','福', '富', '副'],[...巾], [...畐rad],[...N],[...N]);
+const 辐 = new Character('辐', 'fu2','Spokes',['畐','幅','辐','福', '富', '副'],[...车],[...畐rad],[...N],[...N]);
+const 福 = new Character('辐', 'fu2','Blessing',['畐','幅','辐','福', '富', '副'],[...礻],[...畐rad],[...N],[...N]);   
+const 富 = new Character('富', 'fu4','Wealthy', ['畐','幅','辐','福', '富', '副'], [...宀],[...畐rad],[...N],[...N]); 
+const 副 = new Character('副', 'fu4','Secondary',['畐','幅','辐','福', '富', '副'], [...畐rad],[...刂],[...N],[...N]);
 
 
 //ARRAY OF ALL CHARACTERS
@@ -147,7 +168,9 @@ const characters = [
     [包, 抱, 拘, 句],
     [裁, 栽, 载],
     [彻, 切, 窃 ],
-
+    [惭, 渐, 暂, 崭, 斩],
+    [澈, 撤],
+    [畐, 幅, 辐, 福, 富, 副],
  ];
 
 
