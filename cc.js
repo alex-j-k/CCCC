@@ -61,7 +61,6 @@ const 衣 =  [['衣'], ['yi1'], ['Clothes']];
 
 const 巳 =  [['巳'], ['si4'], ['Self']];
 
-const 木 =  [['木'], ['mu4'], ['Tree']];
 const 戈 =  [['戈'], ['ge1'], ['Spear']];
 const 土 =  [['土'], ['tu3'], ['Soil']];
 
@@ -83,6 +82,15 @@ const 巾 =  [['巾'], ['jin1'], ['Towel']];
 const 刂 =  [['刀'], ['dao1'], ['Knife']];
 const 田 =  [['田'], ['tian2'], ['Field']];
 const 宀 =  [['宀'], ['mian2'], ['Roof']];
+
+
+
+
+
+
+const 八rad =  [['八'], ['ba1'], ['Eight']];
+const 木rad =  [['木'], ['mu4'], ['Tree']];
+const 未rad = [['未'], ['wei4'], ['Not Yet']];
 
 
 const 育rad = [['育'], ['yu4'], ['Educate']];
@@ -135,7 +143,7 @@ const 拘 = new Character('拘', 'ju1','Detain',['包', '抱', '拘', '句'], [.
 const 句 = new Character('句', 'ju4','Sentence',['包', '抱', '拘', '句'], [...口],[...勹],[...N],[...N]);
 
 const 裁 = new Character('裁', 'cai2','To cut',['裁', '栽', '载'], [...土],[...衣],[...戈],[...N]);
-const 栽 = new Character('栽', 'zai1','To Grow',['裁', '栽', '载'], [...土],[...木],[...戈],[...N]);
+const 栽 = new Character('栽', 'zai1','To Grow',['裁', '栽', '载'], [...土],[...木rad],[...戈],[...N]);
 const 载 = new Character('载', 'zai4','To Load',['裁', '栽', '载'], [...土],[...车],[...戈],[...N]);
 
 const 彻 = new Character('彻', 'che4','Thorough',['彻','切', '窃'], [...彳],[...七],[...刀],[...N]);
@@ -158,6 +166,13 @@ const 福 = new Character('辐', 'fu2','Blessing',['畐','幅','辐','福', '富
 const 富 = new Character('富', 'fu4','Wealthy', ['畐','幅','辐','福', '富', '副'], [...宀],[...畐rad],[...N],[...N]); 
 const 副 = new Character('副', 'fu4','Secondary',['畐','幅','辐','福', '富', '副'], [...畐rad],[...刂],[...N],[...N]);
 
+const 禾 = new Character('禾', 'he2','Grain', ['禾','来','米','末', '木', '未'], [...一],[...木rad],[...曷rad],[...N]); 
+const 来 = new Character('来', 'lai2','Come', ['禾','来','米','末', '木', '未'], [...八rad],[...未rad],[...N],[...N]); 
+const 米 = new Character('米', 'mi3','Rice',['禾','来','米','末', '木', '未'],[...八rad], [...木rad],[...N],[...N]);
+const 末 = new Character('末', 'mo4','Tip',['禾','来','米','末', '木', '未'],[...一],[...木rad],[...N],[...N]);
+const 木 = new Character('木', 'mu4','Tree',['禾','来','米','末', '木', '未'],[...木rad],[...日],[...N],[...N]);
+const 未 = new Character('未', 'wei4','Not yet',['禾','来','米','末', '木', '未'], [...一],[...木rad],[...N],[...N]);
+
 
 //ARRAY OF ALL CHARACTERS
  
@@ -171,6 +186,7 @@ const characters = [
     [惭, 渐, 暂, 崭, 斩],
     [澈, 撤],
     [畐, 幅, 辐, 福, 富, 副],
+    [禾, 来, 米, 末, 木, 未],
  ];
 
 
