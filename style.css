@@ -45,8 +45,26 @@ nav{
     letter-spacing: 2px;
     font-weight: normal;
     margin-top: -10px;
+    text-decoration: none;
 
 }
+
+.cctitle{
+    font-size: 1.7em;
+    z-index: 998;
+    color: yellow;
+    font-family: shanghai;
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin-top: 5px;
+    
+}
+
+.cclink{
+    text-decoration: none;
+}
+.cclink:visited{
+color: yellow;}
 
 /* SEARCH INPUT */
 .searchform{
@@ -146,6 +164,38 @@ color: black;
 }
 .blue{
     color: blue;
+}
+
+.exinfoandlist{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    justify-content: center;
+    width: 50%;
+}
+
+.about{
+    width: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid yellow;
+    padding: 5px;
+    background-color: cornflowerblue;
+    border-radius: 3px;
+    color: yellow;
+    padding-right: 9px;
+}
+.about:visited{
+    color: yellow;
+}
+.about:hover{
+    background-color: lightblue;
+}
+
+
+.abouttext{
+    text-decoration:none;
 }
 
 
@@ -382,4 +432,32 @@ h1{
 
 
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ABOUTPAGE*/
+#aboutwrapper
+{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+#aboutslab{
+    margin-top: 17%;
+    height: 70%;
 }
