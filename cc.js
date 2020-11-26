@@ -104,8 +104,13 @@ const 纟 = [['纟'], ['si1'], ['Silk']];
 
 const 灬 = [['灬'], ['huo3'], ['Fire']];
 
+const 甘 = [['甘'], ['gan1'], ['Sweet']];
 
 
+const 月rad = [['月'], ['yue4'], ['Month']];
+
+const 其rad = [['其'], ['qi2'], ['Such']];
+月rad
 
 const 十rad = [['十'], ['shi2'], ['Ten']];
 
@@ -240,6 +245,11 @@ const 生 = new Character('生', 'sheng1','Life',['生','牛', '午'], [...牛ra
 const 牛 = new Character('牛', 'niu2','Afternoon',['生','牛', '午'], [...亻],[...十rad],[...N],[...N],[...N]);
 const 午 = new Character('午', 'wu3','Cow',['生','牛', '午'], [...亻],[...十rad],[...N],[...N],[...N]);
 
+const 其 = new Character('其', 'qi2','Such',['其', '棋', '期', '欺'], [...甘],[...一],[...八rad],[...N],[...N]);
+const 棋 = new Character('棋', 'qi2','Chess',['其', '棋', '期', '欺'], [...木rad],[...其rad],[...N],[...N],[...N]);
+const 期 = new Character('期', 'qi1','Period',['其', '棋', '期', '欺'], [...其rad],[...月rad],[...N],[...N],[...N]);
+const 欺 = new Character('欺', 'qi1','Deceive',['其', '棋', '期', '欺'], [...其rad],[...欠],[...N],[...N],[...N]);
+
 
 //ARRAY OF ALL CHARACTERS
  
@@ -261,6 +271,7 @@ const characters = [
     [亚, 业, 晋, 普, 谱],
     [歹, 例, 列, 烈, 夕],
     [生, 牛, 午],
+    [其, 棋, 期, 欺],
  ];
 
 
