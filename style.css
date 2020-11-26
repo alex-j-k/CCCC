@@ -38,7 +38,6 @@ nav{
     background-color: cornflowerblue;
     position: fixed;
     height: 60px;
-    font-size: 1.9em;
     z-index: 998;
     color: yellow;
     font-family: shanghai;
@@ -49,14 +48,16 @@ nav{
 
 }
 
+
+
 .cctitle{
-    font-size: 1.7em;
     z-index: 998;
     color: yellow;
     font-family: shanghai;
     letter-spacing: 2px;
     font-weight: normal;
     margin-top: 5px;
+    font-size: 2.2em;
     
 }
 
@@ -344,10 +345,14 @@ flex: 1;
 
 }
 
+
 nav{
     height: 50px;
-    font-size: 1.7em;
     width: 100%;
+}
+
+.cctitle{
+    font-size: 1.5em;
 }
 
 .searchform{
@@ -396,7 +401,7 @@ p{
 }
 
 .pmain{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 .characterslab{
     margin-top: 4%;
@@ -429,7 +434,9 @@ h1{
     margin-left: 40px;
 }
 
-
+.about{
+    width: 70px;
+}
 
 
 }
