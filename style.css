@@ -195,6 +195,7 @@ p{
     display: none;
         width: 100%;
     margin-left: 80px;
+    display: none;
 }
 
 .confusingslab{
@@ -210,6 +211,7 @@ p{
     border-radius: 1%;
     box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
     opacity: 0.85;
+   
 
 }
 .maincharacterB{
@@ -330,7 +332,11 @@ p{
 
 .h1b{
     font-size: 1.1em;
+    transform: translateY(0%);
+
 }
+
+
 
 .confusingslab{
     height: 60px;

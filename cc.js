@@ -118,7 +118,7 @@ const 正rad = [['正'], ['zheng4'], ['Correct']];
 const 月rad = [['月'], ['yue4'], ['Month']];
 
 const 其rad = [['其'], ['qi2'], ['Such']];
-月rad
+
 
 const 十rad = [['十'], ['shi2'], ['Ten']];
 
@@ -271,7 +271,7 @@ const 延 = new Character('延', 'yan2','Prolong',['诞','廷','庭','挺', '延
 
 const 输 = new Character('输', 'shu1','Transport',['输','俞','偷','愉', '愈', '喻'],[...车], [...俞rad],[...N],[...N],[...N]);
 const 俞 = new Character('俞', 'shu4','Assent', ['输','俞','偷','愉', '愈', '喻'], [...人],[...一],[...月rad],[...刂],[...N]); 
-const 偷 = new Character('偷', 'tou1','Thief', ['输','俞','偷','愉', '愈', '喻'], [...口],[俞rad],[...N],[...N],[...N]);
+const 偷 = new Character('偷', 'tou1','Thief', ['输','俞','偷','愉', '愈', '喻'], [...口],[...俞rad],[...N],[...N],[...N]);
 const 愉 = new Character('愉', 'yu2','Pleasant',['输','俞','偷','愉', '愈', '喻'],[...扌],[...俞rad],[...N],[...N],[...N]);
 const 愈 = new Character('愈', 'yu4','Heal',['输','俞','偷','愉', '愈', '喻'], [...俞rad],[...心],[...N],[...N],[...N]);
 const 喻 = new Character('喻', 'yu4','Analogy',['输','俞','偷','愉', '愈', '喻'], [...口],[...俞rad],[...N],[...N],[...N]);
@@ -496,7 +496,9 @@ const unhide = function(characterToMatch){
 
 console.log(characterToMatch);
 console.log(hiddenslab);
-hiddenslab.forEach(slab=> {if (slab.id.includes(characterToMatch) && slab.classList.contains(characterToMatch) && slab.style.display == 'none'){slab.style.display = 'inline-block'}
+hiddenslab.forEach(slab=> {if (slab.id.includes(characterToMatch) && slab.classList.contains(characterToMatch) && (slab.style.display == 'none' 
+|| slab.style.display == '' ))
+{slab.style.display = 'inline-block'}
 
 else {slab.style.display = 'none'}
 })
