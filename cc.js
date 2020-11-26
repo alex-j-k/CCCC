@@ -213,7 +213,7 @@ const 蓝 = new Character('蓝', 'lan2','Blue',['监', '蓝', '览', '临'], [..
 const 览 = new Character('览', 'lan3','To Look At',['监', '蓝', '览', '临'], [...丨],[...亻],[...丶],[...见rad],[...N]);
 const 临 = new Character('临', 'lin2','Just Near',['监', '蓝', '览', '临'], [...丨],[...亻],[...丶],[...口],[...N]);
 
-const 浇 = new Character('包', 'jiao1','Pour',['浇', '侥', '挠', '饶', '绕'], [...氵],[...戈],[...兀],[...N],[...N]);
+const 浇 = new Character('浇', 'jiao1','Pour',['浇', '侥', '挠', '饶', '绕'], [...氵],[...戈],[...兀],[...N],[...N]);
 const 侥 = new Character('侥', 'jiao3','Lucky',['浇', '侥', '挠', '饶', '绕'], [...亻],[...戈],[...兀],[...N],[...N]);
 const 挠 = new Character('挠', 'nao2','Hinder',['浇', '侥', '挠', '饶', '绕'], [...扌],[...戈],[...兀],[...N],[...N]);
 const 饶 = new Character('饶', 'rao2','Plentiful',['浇', '侥', '挠', '饶', '绕'], [...饣],[...戈],[...兀],[...N],[...N]);
@@ -525,11 +525,34 @@ else if
 
 })
 };
-setTimeout(() => colour(), 3000);
+setTimeout(() => colour(), 000);
 
 
 
+const confcolour = function(){
+    const allslab = document.querySelectorAll('.confusingslab');
+    console.log(allslab);
+   allslab.forEach(slab =>{ if (slab.children[01].children[0].textContent.includes('1'))
+    {slab.firstElementChild.firstElementChild.classList.add('red')}
 
+else if 
+
+(slab.children[01].children[0].textContent.includes('2'))
+    {slab.firstElementChild.firstElementChild.classList.add('green')}
+
+else if
+
+(slab.children[01].children[0].textContent.includes('3'))
+    {slab.firstElementChild.firstElementChild.classList.add('purple')}
+
+else if 
+
+(slab.children[01].children[0].textContent.includes('4'))
+    {slab.firstElementChild.firstElementChild.classList.add('blue')}
+
+})
+};
+setTimeout(() => confcolour(), 8000);
 
 
 
