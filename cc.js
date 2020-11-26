@@ -506,7 +506,24 @@ const colour = function(){
     const allslab = document.querySelectorAll('.characterslab');
     console.log(allslab);
    allslab.forEach(slab =>{ if (slab.textContent.includes('1'))
-    {slab.style.colour = 'red'}})
+    {slab.firstElementChild.firstElementChild.classList.add('red')}
+
+else if 
+
+(slab.textContent.includes('2'))
+    {slab.firstElementChild.firstElementChild.classList.add('green')}
+
+else if
+
+(slab.textContent.includes('3'))
+    {slab.firstElementChild.firstElementChild.classList.add('purple')}
+
+else if 
+
+(slab.textContent.includes('4'))
+    {slab.firstElementChild.firstElementChild.classList.add('blue')}
+
+})
 };
 setTimeout(() => colour(), 3000);
 
