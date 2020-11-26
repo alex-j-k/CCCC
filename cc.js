@@ -107,6 +107,11 @@ const 灬 = [['灬'], ['huo3'], ['Fire']];
 
 
 
+const 十rad = [['十'], ['shi2'], ['Ten']];
+
+const 牛rad = [['牛'], ['niu2'], ['Cow']];
+
+
 const 列rad = [['列'], ['lie4'], ['List']];
 
 const 夕rad = [['夕'], ['xi1'], ['Dusk']];
@@ -231,6 +236,10 @@ const 列 = new Character('列', 'lie4','List',['歹','例','列','烈', '夕'],
 const 烈 = new Character('烈', 'lie4','Intense',['歹','例','列','烈', '夕'], [...列rad],[...灬],[...N],[...N],[...N]);
 const 夕 = new Character('夕', 'xi1','Dusk',['歹','例','列','烈', '夕'],[...夕rad], [...N],[...N],[...N],[...N]);
 
+const 生 = new Character('生', 'sheng1','Life',['生','牛', '午'], [...牛rad],[...一],[...N],[...N],[...N]);
+const 牛 = new Character('牛', 'niu2','Afternoon',['生','牛', '午'], [...亻],[...十rad],[...N],[...N],[...N]);
+const 午 = new Character('午', 'wu3','Cow',['生','牛', '午'], [...亻],[...十rad],[...N],[...N],[...N]);
+
 
 //ARRAY OF ALL CHARACTERS
  
@@ -251,6 +260,7 @@ const characters = [
     [浇, 侥, 挠, 饶, 绕],
     [亚, 业, 晋, 普, 谱],
     [歹, 例, 列, 烈, 夕],
+    [生, 牛, 午],
  ];
 
 
