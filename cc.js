@@ -105,8 +105,16 @@ const 纟 = [['纟'], ['si1'], ['Silk']];
 const 灬 = [['灬'], ['huo3'], ['Fire']];
 
 const 甘 = [['甘'], ['gan1'], ['Sweet']];
+const 廴 = [['廴'], ['yin3'], ['Long Stride']];
+const 壬 = [['壬'], ['ran2'], ['9th Heavenly Stem']];
+const 广 = [['广'], ['guang3'], ['Wide']];
+const 心 = [['心'], ['xin1'], ['Heart']];
 
 
+
+
+const 俞rad = [['俞'], ['shu4'], ['Assent']];
+const 正rad = [['正'], ['zheng4'], ['Correct']];
 const 月rad = [['月'], ['yue4'], ['Month']];
 
 const 其rad = [['其'], ['qi2'], ['Such']];
@@ -115,6 +123,8 @@ const 其rad = [['其'], ['qi2'], ['Such']];
 const 十rad = [['十'], ['shi2'], ['Ten']];
 
 const 牛rad = [['牛'], ['niu2'], ['Cow']];
+const 干 = [['干'], ['gan4'], ['To Do']];
+const 立 = [['立'], ['li4'], ['Stand']];
 
 
 const 列rad = [['列'], ['lie4'], ['List']];
@@ -245,11 +255,26 @@ const 生 = new Character('生', 'sheng1','Life',['生','牛', '午'], [...牛ra
 const 牛 = new Character('牛', 'niu2','Afternoon',['生','牛', '午'], [...亻],[...十rad],[...N],[...N],[...N]);
 const 午 = new Character('午', 'wu3','Cow',['生','牛', '午'], [...亻],[...十rad],[...N],[...N],[...N]);
 
-const 其 = new Character('其', 'qi2','Such',['其', '棋', '期', '欺'], [...甘],[...一],[...八rad],[...N],[...N]);
-const 棋 = new Character('棋', 'qi2','Chess',['其', '棋', '期', '欺'], [...木rad],[...其rad],[...N],[...N],[...N]);
-const 期 = new Character('期', 'qi1','Period',['其', '棋', '期', '欺'], [...其rad],[...月rad],[...N],[...N],[...N]);
-const 欺 = new Character('欺', 'qi1','Deceive',['其', '棋', '期', '欺'], [...其rad],[...欠],[...N],[...N],[...N]);
+const 期 = new Character('期', 'qi1','Period',['期', '欺', '其', '棋'], [...其rad],[...月rad],[...N],[...N],[...N]);
+const 欺 = new Character('欺', 'qi1','Deceive',['期', '欺', '其', '棋'], [...其rad],[...欠],[...N],[...N],[...N]);
+const 其 = new Character('其', 'qi2','Such',['期', '欺', '其', '棋'], [...甘],[...一],[...八rad],[...N],[...N]);
+const 棋 = new Character('棋', 'qi2','Chess',['期', '欺', '其', '棋'], [...木rad],[...其rad],[...N],[...N],[...N]);
 
+const 辛 = new Character('辛', 'xin1','Suffering',['辛', '幸'], [...立],[...十rad],[...N],[...N],[...N]);
+const 幸 = new Character('幸', 'xing4','Fortunate',['辛', '幸'], [...土],[...八rad],[...干],[...N],[...N]);
+
+const 诞 = new Character('诞', 'dan4','Birth', ['诞','廷','庭','挺', '延'], [...忄],[...斩rad],[...N],[...N],[...N]); 
+const 廷 = new Character('廷', 'ting2','Royal Court',['诞','廷','庭','挺', '延'],[...氵], [...斩rad],[...N],[...N],[...N]);
+const 庭 = new Character('庭', 'ting2','Yard',['诞','廷','庭','挺', '延'], [...斩rad],[...日],[...N],[...N],[...N]);
+const 挺 = new Character('挺', 'ting3','Rather',['诞','廷','庭','挺', '延'],[...山],[...斩rad],[...N],[...N],[...N]);
+const 延 = new Character('延', 'yan2','Prolong',['诞','廷','庭','挺', '延'], [...车],[...斤],[...N],[...N],[...N]);
+
+const 输 = new Character('输', 'shu1','Transport',['输','俞','偷','愉', '愈', '喻'],[...车], [...俞rad],[...N],[...N],[...N]);
+const 俞 = new Character('俞', 'shu4','Assent', ['输','俞','偷','愉', '愈', '喻'], [...人],[...一],[...月rad],[...刂],[...N]); 
+const 偷 = new Character('偷', 'tou1','Thief', ['输','俞','偷','愉', '愈', '喻'], [...口],[俞rad],[...N],[...N],[...N]);
+const 愉 = new Character('愉', 'yu2','Pleasant',['输','俞','偷','愉', '愈', '喻'],[...扌],[...俞rad],[...N],[...N],[...N]);
+const 愈 = new Character('愈', 'yu4','Heal',['输','俞','偷','愉', '愈', '喻'], [...俞rad],[...心],[...N],[...N],[...N]);
+const 喻 = new Character('喻', 'yu4','Analogy',['输','俞','偷','愉', '愈', '喻'], [...口],[...俞rad],[...N],[...N],[...N]);
 
 //ARRAY OF ALL CHARACTERS
  
@@ -272,6 +297,9 @@ const characters = [
     [歹, 例, 列, 烈, 夕],
     [生, 牛, 午],
     [其, 棋, 期, 欺],
+    [辛, 幸],
+    [诞, 廷, 庭, 挺, 延],
+    [输, 俞, 偷, 愉, 愈, 喻],
  ];
 
 
@@ -392,6 +420,11 @@ confcontainer.forEach(container =>{ if (container.id.includes(ch.main) && contai
 
 //SPECIFIC FUNCTION TO CREATE NEW CHARCTER INFORMATION SLAB FOR ALL CHARACTERS
 // const makeCharacterSlabs =  characters.forEach(array => {array.forEach(char =>createSlab(char) ) });
+
+// setTimeout(() => characters.sort(function(a, b){a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]); 
+// }), 000);
+
+
 
 setTimeout(() => characters.forEach(array => {array.forEach(char =>createSlab(char))}), 000);
 
@@ -522,7 +555,6 @@ function searchPage() {
 //PAINT MAIN CHARACTER BY PINYIN COLOUR        STILLLLLL TOODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
 
-
 const colour = function(){
     const allslab = document.querySelectorAll('.characterslab');
     console.log(allslab);
@@ -592,7 +624,6 @@ console.dir(testArray.sort(function(a, b){
     return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]); 
 }));
 console.log(testArray);
-
 
 
 
