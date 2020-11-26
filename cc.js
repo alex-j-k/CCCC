@@ -113,6 +113,10 @@ const 心 = [['心'], ['xin1'], ['Heart']];
 
 
 
+const 延rad = [['延'], ['yan2'], ['Prolong']];
+
+const 廷rad = [['廷'], ['ting2'], ['Royal Court']];
+
 const 俞rad = [['俞'], ['shu4'], ['Assent']];
 const 正rad = [['正'], ['zheng4'], ['Correct']];
 const 月rad = [['月'], ['yue4'], ['Month']];
@@ -263,11 +267,11 @@ const 棋 = new Character('棋', 'qi2','Chess',['期', '欺', '其', '棋'], [..
 const 辛 = new Character('辛', 'xin1','Suffering',['辛', '幸'], [...立],[...十rad],[...N],[...N],[...N]);
 const 幸 = new Character('幸', 'xing4','Fortunate',['辛', '幸'], [...土],[...八rad],[...干],[...N],[...N]);
 
-const 诞 = new Character('诞', 'dan4','Birth', ['诞','廷','庭','挺', '延'], [...忄],[...斩rad],[...N],[...N],[...N]); 
-const 廷 = new Character('廷', 'ting2','Royal Court',['诞','廷','庭','挺', '延'],[...氵], [...斩rad],[...N],[...N],[...N]);
-const 庭 = new Character('庭', 'ting2','Yard',['诞','廷','庭','挺', '延'], [...斩rad],[...日],[...N],[...N],[...N]);
-const 挺 = new Character('挺', 'ting3','Rather',['诞','廷','庭','挺', '延'],[...山],[...斩rad],[...N],[...N],[...N]);
-const 延 = new Character('延', 'yan2','Prolong',['诞','廷','庭','挺', '延'], [...车],[...斤],[...N],[...N],[...N]);
+const 诞 = new Character('诞', 'dan4','Birth', ['诞','廷','庭','挺', '延'], [...讠],[...延rad],[...N],[...N],[...N]); 
+const 廷 = new Character('廷', 'ting2','Royal Court',['诞','廷','庭','挺', '延'],[...廴], [...壬],[...N],[...N],[...N]);
+const 庭 = new Character('庭', 'ting2','Yard',['诞','廷','庭','挺', '延'], [...广],[...廷rad],[...N],[...N],[...N]);
+const 挺 = new Character('挺', 'ting3','Rather',['诞','廷','庭','挺', '延'],[...扌],[...廷rad],[...N],[...N],[...N]);
+const 延 = new Character('延', 'yan2','Prolong',['诞','廷','庭','挺', '延'], [...廴],[...正rad],[...N],[...N],[...N]);
 
 const 输 = new Character('输', 'shu1','Transport',['输','俞','偷','愉', '愈', '喻'],[...车], [...俞rad],[...N],[...N],[...N]);
 const 俞 = new Character('俞', 'shu4','Assent', ['输','俞','偷','愉', '愈', '喻'], [...人],[...一],[...月rad],[...刂],[...N]); 
