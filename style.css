@@ -439,6 +439,22 @@ h1{
 }
 
 
+
+#TCwrapper{
+    min-height: 2000px;
+
+}
+
+#TCslab{
+    margin-top: 100px;
+    height: 2000px;
+  
+    
+}
+
+
+
+
 }
 
 
@@ -477,22 +493,23 @@ h1{
     
 }
 
-#abouttext{
+#TCwrapper{
 }
 
 
+   
 #TCslab{
-    margin-top: 200px;
-    min-height: 1000px;
+    margin-top: 100px;
+    height: 2000px;
     font-size: 50px;
-    color: red;
     width: 100%;
-    background-color: gray;
+    background-color: lightgray;
+    align-items: flex-start; 
     
 }
 #tctext{
-    font-size: 10px;
-    margin-top: 100px;
+   font-size: 10px;
+    margin-top: 50px;
     margin-right: 40px;
 
 }
