@@ -458,13 +458,53 @@ h1{
 /*ABOUTPAGE*/
 #aboutwrapper
 {
-    height: 80vh;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-self: center;
+    
 }
 
+
+
+
+
 #aboutslab{
-    margin-top: 17%;
-    height: 70%;
+    margin-top: 15%;
+    height: 400px;
+    /*width: 100%;
+    background-color: gray; */
+    
+}
+
+#abouttext{
+}
+
+
+#TCslab{
+    margin-top: 200px;
+    min-height: 1000px;
+    font-size: 50px;
+    color: red;
+    width: 100%;
+    background-color: gray;
+    
+}
+#tctext{
+    font-size: 10px;
+    margin-top: 100px;
+    margin-right: 40px;
+
+}
+
+/* .TCtext{ 
+    margin-top: 000px;
+    margin-right: 20px;
+    font-size: 8px;
+
+}
+*/
+
+.tc{
+    margin-top: 150px;
 }
