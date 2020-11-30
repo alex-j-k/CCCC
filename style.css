@@ -497,8 +497,8 @@ h1{
 
 
 #aboutslab{
-    margin-top: 15%;
-    height: 400px;
+    margin-top: 21%;
+    height: 600px;
     /*width: 100%;
     background-color: gray; */
     
@@ -535,4 +535,12 @@ h1{
 
 .tc{
     margin-top: 150px;
+}
+
+
+
+
+
+#email{
+    width: 200px;
 }
