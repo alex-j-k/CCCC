@@ -161,7 +161,7 @@ class Character {
         this.main = main;
         this.pinyin = pinyin;
         this.def = def;
-        this.list = list.sort(function(a, b){return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]);  });
+        this.list = list;  /*.sort(function(a, b){return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]);  });*/
         this.rad1 = rad1;
         this.rad2 = rad2;
         this.rad3 = rad3;
@@ -181,8 +181,8 @@ const 渴 = new Character('渴', 'ke3','Thirsty',['蔼','喝','曷','揭', '渴'
 const 揭 = new Character('揭', 'jie1','To Lift',['蔼','喝','曷','揭', '渴', '歇'],[...扌],[...日],[...勹],[...人],[...N]);
 const 歇 = new Character('歇', 'xie1','To Rest',['蔼','喝','曷','揭', '渴', '歇'], [...日],[...勹],[...人],[...欠],[...N]);
 
-const 贝 = new Character('贝', 'bei4','Shell',['见', '贝'], [...冂],[...人],[...N],[...N],[...N]);
-const 见 = new Character('见', 'jian4','To See',['见', '贝'], [...冂],[...儿],[...N],[...N],[...N]);
+const 贝 = new Character('贝', 'bei4','Shell',['贝', '见'], [...冂],[...人],[...N],[...N],[...N]);
+const 见 = new Character('见', 'jian4','To See',['贝', '见'], [...冂],[...儿],[...N],[...N],[...N]);
 
 const 哀 = new Character('哀', 'ai1','Sorrow',['哀', '衰', '衷'], [...衣],[...口],[...N],[...N],[...N]);
 const 衰 = new Character('衰', 'shuai1','Decrease',['哀', '衰', '衷'], [...衣],[...口],[...一],[...N],[...N]);
@@ -273,15 +273,46 @@ const 庭 = new Character('庭', 'ting2','Yard',['诞','廷','庭','挺', '延']
 const 挺 = new Character('挺', 'ting3','Rather',['诞','廷','庭','挺', '延'],[...扌],[...廷rad],[...N],[...N],[...N]);
 const 延 = new Character('延', 'yan2','Prolong',['诞','廷','庭','挺', '延'], [...廴],[...正rad],[...N],[...N],[...N]);
 
-const 输 = new Character('输', 'shu1','Transport',['输','俞','偷','愉', '愈', '喻'],[...车], [...俞rad],[...N],[...N],[...N]);
-const 俞 = new Character('俞', 'shu4','Assent', ['输','俞','偷','愉', '愈', '喻'], [...人],[...一],[...月rad],[...刂],[...N]); 
-const 偷 = new Character('偷', 'tou1','Thief', ['输','俞','偷','愉', '愈', '喻'], [...口],[...俞rad],[...N],[...N],[...N]);
-const 愉 = new Character('愉', 'yu2','Pleasant',['输','俞','偷','愉', '愈', '喻'],[...扌],[...俞rad],[...N],[...N],[...N]);
-const 愈 = new Character('愈', 'yu4','Heal',['输','俞','偷','愉', '愈', '喻'], [...俞rad],[...心],[...N],[...N],[...N]);
-const 喻 = new Character('喻', 'yu4','Analogy',['输','俞','偷','愉', '愈', '喻'], [...口],[...俞rad],[...N],[...N],[...N]);
+const 输 = new Character('输', 'shu1','Transport',['输','偷','俞','愉', '愈', '喻'],[...车], [...俞rad],[...N],[...N],[...N]);
+const 俞 = new Character('俞', 'yu2','Assent', ['输','偷','俞','愉', '愈', '喻'], [...人],[...一],[...月rad],[...刂],[...N]); 
+const 偷 = new Character('偷', 'tou1','Thief', ['输','偷','俞','愉', '愈', '喻'], [...亻],[...俞rad],[...N],[...N],[...N]);
+const 愉 = new Character('愉', 'yu2','Pleasant',['输','偷','俞','愉', '愈', '喻'],[...扌],[...俞rad],[...N],[...N],[...N]);
+const 愈 = new Character('愈', 'yu4','Heal',['输','偷','俞','愉', '愈', '喻'], [...俞rad],[...心],[...N],[...N],[...N]);
+const 喻 = new Character('喻', 'yu4','Analogy',['输','偷','俞','愉', '愈', '喻'], [...口],[...俞rad],[...N],[...N],[...N]);
 
 //ARRAY OF ALL CHARACTERS
  
+const characters = [
+    蔼, 喝, 曷, 渴, 揭, 歇,
+    贝, 见,
+    哀, 衰, 衷,
+    包, 抱, 拘, 句,
+    裁, 栽, 载,
+    彻, 切, 窃 ,
+    惭, 渐, 暂, 崭, 斩,
+    澈, 撤,
+    畐, 幅, 辐, 福, 富, 副,
+    禾, 来, 米, 末, 木, 未,
+    季, 李,
+    坚, 型,
+    监, 蓝, 览, 临,
+    浇, 侥, 挠, 饶, 绕,
+    亚, 业, 晋, 普, 谱,
+    歹, 例, 列, 烈, 夕,
+    生, 牛, 午,
+    其, 棋, 期, 欺,
+    辛, 幸,
+    诞, 廷, 庭, 挺, 延,
+    输, 俞, 偷, 愉, 愈, 喻,
+ ];
+
+console.log(characters);
+ characters.sort((a, b) => a.main.localeCompare(b.main, [ "zh-CN-u-co-pinyin" ]));
+console.log(characters[73]);
+
+
+// old Array of Arrays
+/*
 const characters = [
     [蔼, 喝, 曷, 渴, 揭, 歇],
     [见, 贝],
@@ -306,6 +337,9 @@ const characters = [
     [输, 俞, 偷, 愉, 愈, 喻],
  ];
 
+console.log(characters);
+ characters.sort((a, b) => a.main.localeCompare(b.main))
+*/
 
 
 
@@ -314,9 +348,52 @@ const characters = [
 
 
 
+// setTimeout(() => {characters.sort(function(a, b){a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]) 
+// })}, 000);
+
+// let singleArray = setTimeout(() => {
+//     characters.map(bigfunction);
+
+// }, 5000); 
+// setTimeout(() => {
+//     console.log(singleArray);
+
+// }, 7000); 
+
+// // setTimeout(() => characters.forEach(array => {array.forEach(char => {singleArray.push(char.main)})}), 000);
+
+
+// function bigfunction(num) { 
+//     num.forEach(ch=> eval(ch));
+// };
+// console.log(singleArray);
 
 
 
+
+//tryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+// let singleArray =[];
+// setTimeout(() => characters.forEach(array => {array.forEach(char =>singleArray.push(char))}), 7000);
+
+// setTimeout(() => {
+//     singleArray.sort();
+//     console.log(singleArray);
+//     }
+// , 10000);
+
+
+
+
+// let singleArray =[];
+// setTimeout(() => characters.forEach(char=>singleArray.push(char.main)), 7000);
+
+// setTimeout(() => {
+//     singleArray.sort(function(a, b){
+//         return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ])})
+//     console.log(singleArray);
+
+//     }
+// , 10000);
 
 
 
@@ -429,8 +506,8 @@ confcontainer.forEach(container =>{ if (container.id.includes(ch.main) && contai
 // }), 000);
 
 
-
-setTimeout(() => characters.forEach(array => {array.forEach(char =>createSlab(char))}), 000);
+setTimeout(() => characters.forEach((char =>createSlab(char))), 000);
+//setTimeout(() => characters.forEach(array => {array.forEach(char =>createSlab(char))}), 000);
 
 
 
@@ -619,17 +696,11 @@ setTimeout(() => confcolour(), 8000);
 
 
 //SORT CHARACTERS BY PINYIN
-const testArray = ['歇', '曷', '喝', '渴', '揭'];
-
-
-
-
-
-
-console.dir(testArray.sort(function(a, b){
-    return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]); 
-}));
-console.log(testArray);
+// const testArray = ['歇', '曷', '喝', '渴', '揭'];
+// testArray.sort(function(a, b){
+//     return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]); 
+// });
+// console.log(testArray);
 
 
 
@@ -675,6 +746,27 @@ console.log(testArray);
 // }} console.log(hiddenslabs)
 // };
 
+
+
+
+// singleArray.sort(function(a, b){
+//     return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]); 
+// });
+// characters.concat();
+
+// pin.sort(function(a, b){
+//     return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]); 
+// });
+// console.log(characters);
+
+// let pinn = Array.from(pin);
+// console.log(pinn);
+// pinn.forEach(pinnn => console.log(pinn.innerText))
+
+// .sort(function(a, b){
+//     return a.localeCompare(b, [ "zh-CN-u-co-pinyin" ]); 
+// });
+// console.log(pin);
 
 
 
