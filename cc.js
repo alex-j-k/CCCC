@@ -175,11 +175,11 @@ class Character {
 
 //CHARACTER CONSTANTS
 const 蔼 = new Character('蔼', 'ai3','Friendly', ['蔼','喝','曷','揭', '渴', '歇'], [...讠],[...艹],[...曷rad],[...N],[...N]); 
-const 喝 = new Character('喝', 'he1','To Drink', ['蔼','喝','曷','揭', '渴', '歇'], [...口],[...日],[...勹],[...人],[...N]); 
+const 喝 = new Character('喝', 'he1','To Drink', ['蔼','喝','曷','揭', '渴', '歇'], [...口],[...曷rad],[...N],[...N],[...N]); 
 const 曷 = new Character('曷', 'he2','Why?',['蔼','喝','曷','揭', '渴', '歇'],[...日], [...勹],[...人],[...N],[...N]);
-const 渴 = new Character('渴', 'ke3','Thirsty',['蔼','喝','曷','揭', '渴', '歇'], [...氵],[...日],[...勹],[...人],[...N]);
-const 揭 = new Character('揭', 'jie1','To Lift',['蔼','喝','曷','揭', '渴', '歇'],[...扌],[...日],[...勹],[...人],[...N]);
-const 歇 = new Character('歇', 'xie1','To Rest',['蔼','喝','曷','揭', '渴', '歇'], [...日],[...勹],[...人],[...欠],[...N]);
+const 渴 = new Character('渴', 'ke3','Thirsty',['蔼','喝','曷','揭', '渴', '歇'], [...氵],[...曷rad],[...N],[...N],[...N]);
+const 揭 = new Character('揭', 'jie1','To Lift',['蔼','喝','曷','揭', '渴', '歇'],[...扌],[...曷rad],[...N],[...N],[...N]);
+const 歇 = new Character('歇', 'xie1','To Rest',['蔼','喝','曷','揭', '渴', '歇'], [...曷rad],[...欠],[...N],[...N],[...N]);
 
 const 贝 = new Character('贝', 'bei4','Shell',['贝', '见'], [...冂],[...人],[...N],[...N],[...N]);
 const 见 = new Character('见', 'jian4','To See',['贝', '见'], [...冂],[...儿],[...N],[...N],[...N]);
