@@ -79,7 +79,7 @@ const 攵 =  [['攵'], ['pu1'], ['Tap']];
 const 礻 =  [['礻'], ['shi4'], ['Spirit']];
 
 const 巾 =  [['巾'], ['jin1'], ['Towel']];
-const 刂 =  [['刀'], ['dao1'], ['Knife']];
+const 刂 =  [['刂'], ['dao1'], ['Knife']];
 const 田 =  [['田'], ['tian2'], ['Field']];
 const 宀 =  [['宀'], ['mian2'], ['Roof']];
 const 子 =  [['子'], ['zi3'], ['Child']];

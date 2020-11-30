@@ -227,14 +227,14 @@ width: 100%;
 }
 
 p{
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: ;
     margin: 0%;
     margin-left: 4%;
 }
 
 .pinyin{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -401,7 +401,7 @@ p{
 }
 
 .pmain{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 .characterslab{
     margin-top: 4%;
