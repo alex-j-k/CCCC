@@ -145,7 +145,7 @@ const 亚rad = [['亚'], ['ya4'], ['Profession']];
 const 育rad = [['育'], ['yu4'], ['Educate']];
 const 畐rad = [['畐'], ['fu2'], ['Fill']];
 const 富rad = [['富'], ['fu4'], ['Wealthy']];
-const 斩rad = [['穴'], ['zhan3'], ['Chop']];
+const 斩rad = [['斩'], ['zhan3'], ['Chop']];
 const 穴rad = [['穴'], ['xue2'], ['Cave']];
 const 曷rad = [['曷'], ['he2'], ['Why?']];
 
@@ -213,7 +213,7 @@ const 撤 = new Character('撤', 'che4','Withdraw',['澈', '撤'], [...扌],[...
 const 畐 = new Character('畐', 'fu2','Fill', ['畐','幅','辐','福', '富', '副'], [...一],[...口],[...田],[...N],[...N]);
 const 幅 = new Character('幅', 'fu2','Width',['畐','幅','辐','福', '富', '副'],[...巾], [...畐rad],[...N],[...N],[...N]);
 const 辐 = new Character('辐', 'fu2','Spokes',['畐','幅','辐','福', '富', '副'],[...车],[...畐rad],[...N],[...N],[...N]);
-const 福 = new Character('辐', 'fu2','Blessing',['畐','幅','辐','福', '富', '副'],[...礻],[...畐rad],[...N],[...N],[...N]);   
+const 福 = new Character('福', 'fu2','Blessing',['畐','幅','辐','福', '富', '副'],[...礻],[...畐rad],[...N],[...N],[...N]);   
 const 富 = new Character('富', 'fu4','Wealthy', ['畐','幅','辐','福', '富', '副'], [...宀],[...畐rad],[...N],[...N],[...N]); 
 const 副 = new Character('副', 'fu4','Secondary',['畐','幅','辐','福', '富', '副'], [...畐rad],[...刂],[...N],[...N],[...N]);
 
