@@ -306,9 +306,9 @@ const characters = [
     输, 俞, 偷, 愉, 愈, 喻,
  ];
 
-console.log(characters);
+// console.log(characters);
  characters.sort((a, b) => a.main.localeCompare(b.main, [ "zh-CN-u-co-pinyin" ]));
-console.log(characters[73]);
+// console.log(characters[73]);
 
 
 // old Array of Arrays
@@ -518,12 +518,12 @@ let arrayToLoop = [];
 
 const makeConfArray = function() {
 const simCharacterlists = Array.from(document.querySelectorAll('.similarList'));
-console.log(simCharacterlists);
+// console.log(simCharacterlists);
 
 
  for (i = 0; i < simCharacterlists.length; i++) {
   arrayToLoop.push(Array.from(simCharacterlists[i].textContent));
-  console.log(arrayToLoop.join(','))
+//   console.log(arrayToLoop.join(','))
   };
 };
 
@@ -539,12 +539,12 @@ setTimeout((makeConfArray), 000);
 
 const makeConfSlabs = () => {  
 
-console.log(arrayToLoop);
+// console.log(arrayToLoop);
 
 arrayToLoop.forEach(singlearray => {
 
     singlearray.forEach(character=> { 
-        if (character === ' ') {console.log('nun der')} else
+        if (character === ' ') {} else
         {createConfusingSlab(eval(character))}
     } 
  )
@@ -640,7 +640,7 @@ function searchPage() {
 
 const colour = function(){
     const allslab = document.querySelectorAll('.characterslab');
-    console.log(allslab);
+    // console.log(allslab);
    allslab.forEach(slab =>{ if (slab.textContent.includes('1'))
     {slab.firstElementChild.firstElementChild.classList.add('red')}
 
@@ -667,7 +667,7 @@ setTimeout(() => colour(), 000);
 
 const confcolour = function(){
     const allslab = document.querySelectorAll('.confusingslab');
-    console.log(allslab);
+    // console.log(allslab);
    allslab.forEach(slab =>{ if (slab.children[01].children[0].textContent.includes('1'))
     {slab.firstElementChild.firstElementChild.classList.add('red')}
 
@@ -688,7 +688,7 @@ else if
 
 })
 };
-setTimeout(() => confcolour(), 8000);
+setTimeout(() => confcolour(), 000);
 
 
 
